@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Garage/src"/>
+	<classpathentry kind="src" path="Library/src"/>
+	<classpathentry kind="src" path="NumberGame/src/number"/>
+	<classpathentry kind="src" path="PaintWizard/src"/>
+	<classpathentry kind="src" path="Person/src"/>
+	<classpathentry kind="src" path="prog1/src"/>
+	<classpathentry kind="src" path="ReverseFactorial/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Garage/bin"/>
+</classpath>
