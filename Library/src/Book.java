@@ -10,8 +10,33 @@ public class Book extends Item {
 		super(title, isAvail);
 		this.author = author; 
 		this.isbn = isbn;
-		this.author = author; 
 	}
+		
+	
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+		
 	
 	@Override
 	public String toString() {
@@ -19,6 +44,8 @@ public class Book extends Item {
 								+ "ISBN: " + this.isbn
 								+ "Type: " + this.type; 
 	}
+
+	
 
 
 }

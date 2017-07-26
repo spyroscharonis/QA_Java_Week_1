@@ -13,6 +13,30 @@ public class Thesis extends Item {
 			this.degreeType = degreeType; 
 		}
 	
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
+	}
+
+	public String getDegreeType() {
+		return degreeType;
+	}
+
+	public void setDegreeType(String degreeType) {
+		this.degreeType = degreeType;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() + "Author: " + this.author

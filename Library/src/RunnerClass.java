@@ -7,6 +7,7 @@ public class RunnerClass {
 		
 		lib1.printOpeningHrs(); 
 		
+		// Add/Remove Contents 
 		Book b1 = new Book("Intro to Java", true, "Herbert Schildt", "978-1-118-80857-3", "textbook");
 		Book b2 = new Book("Intro to Python", false, "Guido van Rossum", "723-5-107-57732-4", "textbook");
 		Book b3 = new Book("Foucault's Pendulum", true, "Umberto Eco", "88-452-1591-1", "mystery/sci fi");
@@ -22,7 +23,18 @@ public class RunnerClass {
 		lib1.addItem(b2);
 		lib1.addItem(b3);
 		
-		lib1.removeItemByTitle(b2.title); 
+		lib1.addItem(j1);
+		lib1.addItem(j2);
+		
+		lib1.addItem(t1);
+		
+		//lib1.removeItemByTitle(b2.title); 
+		
+		// Print Contents 
+		lib1.printAvailItems();
+		
+		lib1.serialize("C:\\Users\\Administrator\\Desktop\\Library_Catalogue");
+		lib1.deserialize("C:\\Users\\Administrator\\Desktop\\Library_Catalogue.txt"); 
 	}
 
 }
