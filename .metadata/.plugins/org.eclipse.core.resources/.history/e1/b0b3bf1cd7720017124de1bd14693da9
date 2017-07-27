@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+
+public class PrimeNums {
+	
+	 public void getPrimes1(int low, int high, int n = 2;) {		
+		 
+		 if ((low % 1 != 0) || (high % 1 != 0)) {
+			 System.out.println("Both numbers must be integers!");
+		 }
+		 
+		 int primes = 0;
+		 int divisors = 0;
+
+			 for (int i = low; (i <= high+1); i++) {
+				 for (int j = 1; (j <= i+1); j++) {
+					 if (i % j == 0) {
+						 divisors += 1;
+				     }
+				 }
+				 
+				 if (divisors == n) {
+					 // prime number found 
+					 primes += 1; 				 
+				}
+				 
+			divisors = 0; 		 
+
+			 }
+				 
+		System.out.println("There are " + primes +  " prime numbers between " + low + " and " + high);
+
+	 }
+	 
+	
+	 
+	 ArrayList<Integer> primes = new ArrayList<Integer>();
+	 
+	 public int getPrimes2(int low, int high) {
+		 
+	     for (int i = low; i < high; i++) {
+	         if(isPrime(i)) {
+	             primes.add(i);
+	         }
+	     }
+	     
+	     return primes.size(); 
+	     //System.out.println(primes);
+	 }
+
+	 public boolean isPrime(int n) {
+		 
+	     for (Integer i : primes) {
+	    	 if (i*i > n) 
+	    	 	{ break; } 
+	    	 
+	    	 else if (n % i == 0) 
+	    	 	{ return false; }
+	    	 
+	      }
+	     
+	     return true;
+	 }
+		 
+}
+	
+	 
+	
