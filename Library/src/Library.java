@@ -47,7 +47,7 @@ public class Library {
 	}
 	
 	
-	public void CheckOutItem(Item i) {
+	public void checkOutItem(Item i) {
 				
 		for (Item item: LibCatalogue) {
 			
@@ -62,7 +62,7 @@ public class Library {
 	}
 	
 	
-	public void ReturnItem(Item i) {
+	public void returnItem(Item i) {
 		
 		if (i.isAvail == false) {
 			LibCatalogue.add(i);
@@ -97,7 +97,7 @@ public class Library {
 	}
 	
 	
-	public void serialize(String filename) {
+	public void writeLibToFile(String filename) {
 		
 		try(BufferedWriter out = new BufferedWriter(new FileWriter(filename + ".txt"))) {
 			//System.out.println("Entering" + " try statement");
@@ -113,8 +113,7 @@ public class Library {
 				
 				else if (item instanceof Journal) { 
 					Journal j = (Journal) item; 
-					out.write("Journal" + delim + j.getIsAvail() + delim + j.getTitle() + delim + j.getEdition() + delim + j.getVolume() + delim + j.getTitle());
-					out.newLine();
+					out.write("Journal" + delim + j.getIsAvail() + delim + j.getTitle() + delim + j.getEdition() + delim + j.getVolume() + delim + j.getType());					out.newLine();
 				}
 				
 				else if (item instanceof Thesis) {
@@ -170,7 +169,7 @@ public class Library {
     */ 
 	
 
-	public ArrayList <Item> deserialize(String Filename) {	
+	public ArrayList <Item> readLibFromFile(String Filename) {	
 		
 		ArrayList <Item> LibContents = new ArrayList <Item>();
 	
@@ -185,7 +184,7 @@ public class Library {
 				}
 				
 				else if (lineArr[0].equals("Journal")) {
-					LibContents.add(new Journal(lineArr[0], Boolean.parseBoolean(lineArr[1]), Integer.parseInt(lineArr[2]), Integer.parseInt(lineArr[3]), lineArr[4]));
+					LibContents.add(new Journal(lineArr[0], Boolean.parseBoolean(lineArr[1]), Integer.parseInt(lineArr[3]), Integer.parseInt(lineArr[4]), lineArr[5]));
 				}
 				
 				else if (lineArr[0].equals("Thesis")) {

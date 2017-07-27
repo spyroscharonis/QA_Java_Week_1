@@ -33,8 +33,8 @@ public class RunnerClass {
 		// Print Contents 
 		lib1.printAvailItems();
 		
-		lib1.serialize("C:\\Users\\Administrator\\Desktop\\Library_Catalogue");
-		lib1.deserialize("C:\\Users\\Administrator\\Desktop\\Library_Catalogue.txt"); 
+		lib1.writeLibToFile("C:\\Users\\Administrator\\Desktop\\Library_Catalogue");
+		lib1.readLibFromFile("C:\\Users\\Administrator\\Desktop\\Library_Catalogue.txt"); 
 	}
 
 }
